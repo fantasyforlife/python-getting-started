@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TG vs HG</title>
+	</head>
+	<body>
+		<ul>
+		{% for node in data %}
+    		<li>{{ node.f_name }}|{{ node.t_name }}|{{ node.score }}|{{ node.rank }}</li>
+		{% endfor %}
+		</ul>
+	</body>
+</html>
