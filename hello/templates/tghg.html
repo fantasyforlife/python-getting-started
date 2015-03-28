@@ -1,16 +1,14 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>TG vs HG</title>
+		<script src="{% static "sortable.min.js" %}"></script>
+		<link rel="stylesheet" href="{% static "sortable-theme-bootstrap.css" %}"/>
 	</head>
 	<body>
-		<!-- <ul>
-		{% for node in data %}
-    		<li>{{ node.f_name }}|{{ node.t_name }}|{{ node.score }}|{{ node.rank }}</li>
-		{% endfor %}
-		</ul> -->
-		<table>
+		<table class="sortable-theme-bootstrap" data-sortable>
 			<caption>Points Table</caption>
 			<thead>
 				<tr>
@@ -28,8 +26,9 @@
 					<td colspan="" rowspan="" headers="">{{ node.score }}</td>
 					<td colspan="" rowspan="" headers="">{{ node.rank }}</td>
 				</tr>
-			</tbody>
 			{% endfor %}
+			</tbody>
+			<!-- <script>Sortable.init()</script> -->
 		</table>
 	</body>
 </html>
