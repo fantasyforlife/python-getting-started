@@ -5,10 +5,31 @@
 		<title>TG vs HG</title>
 	</head>
 	<body>
-		<ul>
+		<!-- <ul>
 		{% for node in data %}
     		<li>{{ node.f_name }}|{{ node.t_name }}|{{ node.score }}|{{ node.rank }}</li>
 		{% endfor %}
-		</ul>
+		</ul> -->
+		<table>
+			<caption>Points Table</caption>
+			<thead>
+				<tr>
+					<th colspan="" rowspan="" headers="" scope="">Player Name</th>
+					<th colspan="" rowspan="" headers="" scope="">Team Name</th>
+					<th colspan="" rowspan="" headers="" scope="">Score</th>
+					<th colspan="" rowspan="" headers="" scope="">Rank</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for node in data %}
+				<tr>
+					<td colspan="" rowspan="" headers="">{{ node.f_name }}</td>
+					<td colspan="" rowspan="" headers="">{{ node.t_name }}</td>
+					<td colspan="" rowspan="" headers="">{{ node.score }}</td>
+					<td colspan="" rowspan="" headers="">{{ node.rank }}</td>
+				</tr>
+			</tbody>
+			{% endfor %}
+		</table>
 	</body>
 </html>
