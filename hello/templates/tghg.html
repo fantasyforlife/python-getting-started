@@ -6,7 +6,7 @@
 		<title>TG vs HG</title>
 		<script src="{% static "sortable.min.js" %}"></script>
 		<link rel="stylesheet" href="{% static "sortable-theme-bootstrap.css" %}"/>
-		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
 		<link rel="stylesheet" href="{% static "tablealign.css" %}"/>
 	</head>
@@ -35,7 +35,7 @@
 			</tbody>
 		</table> -->
 
-		<table class="sortable-theme-bootstrap" id="tg-table" data-sortable>
+		<table class="table table-bordered table-hover table-nonfluid" id="tg-table" data-sortable>
 			<caption>TG Table</caption>
 			<thead>
 				<tr>
@@ -58,7 +58,7 @@
 			<!-- <script>Sortable.init()</script> -->
 		</table>
 
-		<table class="sortable-theme-bootstrap" id="hg-table" data-sortable>
+		<table class="table table-bordered table-hover table-nonfluid" id="hg-table" data-sortable>
 			<caption>HG Table</caption>
 			<thead>
 				<tr>
@@ -81,7 +81,7 @@
 			<!-- <script>Sortable.init()</script> -->
 		</table>
 
-		<table class="sortable-theme-bootstrap" id="stats" data-sortable>
+		<table class="table table-bordered table-hover table-nonfluid" id="stats" data-sortable>
 			<caption>H2H Stats</caption>
 			<thead>
 				<!-- <tr>
@@ -119,5 +119,9 @@
 				</tr>
 			</tbody>
 		</table>
+		<blockquote class="blockquote-reverse">
+			<footer>Sorting Has Been Enabled, Click on Column-Headers to Sort</footer>
+			<footer>Data Will Be Updated After The Match is Over</footer>
+		</blockquote>
 	</body>
 </html>

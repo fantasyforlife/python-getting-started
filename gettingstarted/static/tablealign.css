@@ -10,5 +10,18 @@
 
 #stats
 {
+	padding-left: 5px;
 	float: center;
 }
+
+.table-nonfluid {
+   width: auto !important;
+}
+
+.blockquote-reverse {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+/*http://stackoverflow.com/questions/10687306/why-do-twitter-bootstrap-tables-always-have-100-width*/
