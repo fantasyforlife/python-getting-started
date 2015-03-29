@@ -1,0 +1,14 @@
+#tg-table
+{
+	float: left;
+}
+
+#hg-table
+{
+    float: right;
+}
+
+#stats
+{
+	float: center;
+}

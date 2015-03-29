@@ -6,9 +6,12 @@
 		<title>TG vs HG</title>
 		<script src="{% static "sortable.min.js" %}"></script>
 		<link rel="stylesheet" href="{% static "sortable-theme-bootstrap.css" %}"/>
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+		<link rel="stylesheet" href="{% static "tablealign.css" %}"/>
 	</head>
 	<body>
-		<table class="sortable-theme-bootstrap" data-sortable>
+		<!-- <table class="sortable-theme-bootstrap" data-sortable>
 			<caption>Points Table</caption>
 			<thead>
 				<tr>
@@ -16,6 +19,7 @@
 					<th colspan="" rowspan="" headers="" scope="">Team Name</th>
 					<th colspan="" rowspan="" headers="" scope="">Score</th>
 					<th colspan="" rowspan="" headers="" scope="">Rank</th>
+					<th colspan="" rowspan="" headers="" scope="">U_ID</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,10 +29,95 @@
 					<td colspan="" rowspan="" headers="">{{ node.t_name }}</td>
 					<td colspan="" rowspan="" headers="">{{ node.score }}</td>
 					<td colspan="" rowspan="" headers="">{{ node.rank }}</td>
+					<td colspan="" rowspan="" headers="">{{ node.u_id }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table> -->
+
+		<table class="sortable-theme-bootstrap" id="tg-table" data-sortable>
+			<caption>TG Table</caption>
+			<thead>
+				<tr>
+					<th colspan="" rowspan="" headers="" scope="">Player Name</th>
+					<th colspan="" rowspan="" headers="" scope="">Team Name</th>
+					<th colspan="" rowspan="" headers="" scope="">Score</th>
+					<th colspan="" rowspan="" headers="" scope="">Rank</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for node in tg %}
+				<tr>
+					<td colspan="" rowspan="" headers="">{{ node.f_name }}</td>
+					<td colspan="" rowspan="" headers="">{{ node.t_name }}</td>
+					<td colspan="" rowspan="" headers="">{{ node.score }}</td>
+					<td colspan="" rowspan="" headers="">{{ node.rank }}</td>
 				</tr>
 			{% endfor %}
 			</tbody>
 			<!-- <script>Sortable.init()</script> -->
+		</table>
+
+		<table class="sortable-theme-bootstrap" id="hg-table" data-sortable>
+			<caption>HG Table</caption>
+			<thead>
+				<tr>
+					<th colspan="" rowspan="" headers="" scope="">Player Name</th>
+					<th colspan="" rowspan="" headers="" scope="">Team Name</th>
+					<th colspan="" rowspan="" headers="" scope="">Score</th>
+					<th colspan="" rowspan="" headers="" scope="">Rank</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for node in hg %}
+				<tr>
+					<td colspan="" rowspan="" headers="">{{ node.f_name }}</td>
+					<td colspan="" rowspan="" headers="">{{ node.t_name }}</td>
+					<td colspan="" rowspan="" headers="">{{ node.score }}</td>
+					<td colspan="" rowspan="" headers="">{{ node.rank }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+			<!-- <script>Sortable.init()</script> -->
+		</table>
+
+		<table class="sortable-theme-bootstrap" id="stats" data-sortable>
+			<caption>H2H Stats</caption>
+			<thead>
+				<!-- <tr>
+					<th text-align="center">Stats</th>
+				</tr> -->
+				<tr>
+					<th>TG</th>
+					<th>HG</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>TGian's Total Today = {{ sum.0 }}</td>
+					<td>HGian's Total Today = {{ sum.1 }}</td>
+				</tr>
+				<tr>
+					<td>TGian's Avg Today = {{ sum.2 }}</td>
+					<td>HGian's Avg Today = {{ sum.3 }}</td>
+				</tr>
+				<tr>
+					<td>TGian's Score = 24</td>
+					<td>HGian's Score = 23</td>
+				</tr>
+				<tr>
+					<td>TGian's Score P1 = 9</td>
+					<td>HGian's Score P1 = 11</td>
+				</tr>
+				<tr>
+					<td>TGian's Score P2 = 12</td>
+					<td>HGian's Score P2 = 9</td>
+				</tr>
+				<tr>
+					<td>TGian's Score P3 = 3</td>
+					<td>HGian's Score P3 = 3</td>
+				</tr>
+			</tbody>
 		</table>
 	</body>
 </html>
